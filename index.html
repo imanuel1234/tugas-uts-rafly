@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Mochammad Rafly Putra Mulyana</title>
+    <link rel="stylesheet" href="nando.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+    <style>
+        .hero {
+            background-image: url('WhatsApp Image 2025-05-12 at 05.38.58.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            z-index: 2;
+        }
+        .marquee-container {
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .marquee {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .slider {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .slider .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slider img {
+            width: 100%;
+            object-fit: cover;
+        }
+        .slider h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mochammad Rafly Putra Mulyana</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Saya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pendidikan">Riwayat Pendidikan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#audio">Audio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bukutamu">Buku Tamu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Mochammad Rafly Putra Mulyana/h1>
+            <p class="lead">Temukan informasi tentang saya, pendidikan, karya, dan banyak lagi.</p>
+            <a href="#tentang" class="btn btn-primary btn-lg mt-3">Jelajahi Sekarang</a>
+        </div>
+    </header>
+
+    <!-- Marquee Text -->
+    <div class="marquee-container">
+        <div class="marquee">
+haii, saya Mochammad Rafly Putra Mulyana, Mahasiswa Sistem Informasi yang antusias dengan dunia teknologi dan pengembangan perangkat lunak, saya disini ingin terus belajar dan berkarya dijurusan yang saya ambil, terimakasiii semuaaa        </div>
+    </div>
+
+<div class="marquee-container">
+  <div class="marquee">
+haii, saya Mochammad Rafly Putra Mulyana, Mahasiswa Sistem Informasi yang antusias dengan dunia teknologi dan pengembangan perangkat lunak, saya disini ingin terus belajar dan berkarya dijurusan yang saya ambil, terimakasiii semuaaa  </div>
+</div>
+ <div class="slider">
+    <div class="slides" id="sliderImages">
+      <img src="WhatsApp Image 2025-05-12 at 05.38.58.jpeg" alt="Gambar 1" />
+      <img src="WhatsApp Image 2025-05-12 at 05.38.59.jpeg" alt="Gambar 2" />
+      <img src="20230911082553.jpg" alt="Gambar 3" />
+      <img src="WhatsApp Image 2025-04-14 at 09.41.02.jpeg" />
+      <img src="WhatsApp Image 2025-03-22 at 03.42.57.jpeg" alt="Gambar 5" />
+      <img src="WhatsApp Image 2025-04-14 at 09.41.40.jpeg" alt="Gambar 6" />
+    </div>
+    <h1>Mochammad Rafly Putra Mulyana</h1>
+  </div>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sliderImages = document.getElementById("sliderImages");
+    const totalImages = sliderImages.children.length;
+    let currentIndex = 0;
+    let direction = 1; // 1 untuk maju (kiri), -1 untuk mundur (kanan)
+
+    setInterval(() => {
+      currentIndex += direction;
+      
+      // Jika mencapai gambar terakhir, ubah arah
+      if (currentIndex === totalImages - 1 || currentIndex === 0) {
+        direction *= -1;
+      }
+
+      // Geser gambar
+      sliderImages.style.transition = "transform 0.5s ease";
+      sliderImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 1500); // 1,5 detik
+  });
+</script>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="container my-5">
+    <h2 class="text-primary mb-4">Tentang Saya</h2>
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="WhatsApp Image 2025-05-12 at 05.38.58.jpeg" alt="Foto Imanuel" class="img-fluid rounded-circle mb-3">
+        </div>
+        <div class="col-md-8">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Birthday:</strong> 30 Maret 2004</li>
+                <li class="list-group-item"><strong>Website:</strong> -</li>
+                <li class="list-group-item"><strong>Phone:</strong> 081232031814</li>
+                <li class="list-group-item"><strong>City:</strong> Tuban, Indonesia</li>
+                <li class="list-group-item"><strong>Age:</strong> 21 tahun</li>
+                <li class="list-group-item"><strong>Degree:</strong> -</li>
+                <li class="list-group-item"><strong>Email:</strong> mochammad.mulyana23@student.uisi.ac.id</li>
+                <li class="list-group-item"><strong>Freelance:</strong> Healing</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <!-- Riwayat Pendidikan -->
+    <section id="pendidikan" class="container my-5">
+    <h2 class="text-primary mb-4">Riwayat Pendidikan</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>SDIT AL USWAH TUBAN</strong> <br>
+                    <span class="text-muted">2011 - 2017</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>SMPN 5 TUBAN</strong> <br>
+                    <span class="text-muted">2017 - 2020</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>SMAN 5 TARUNA BRAWIJAYA JAWA TIMUR</strong> <br>
+                    <span class="text-muted">2020 - 2023</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Universitas Internasional Semen Indonesia</strong> <br>
+                    <span class="text-muted">Sistem Informasi (2023 - Sekarang)</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <!-- Video -->
+    <section id="video" class="container my-5">
+        <h2 class="text-primary mb-4">Video Saya</h2>
+        <video controls width="100%">
+            <source src="" type="video/mp4" />
+            Browser Anda tidak mendukung video.
+        </video>
+        <section id="video" class="video-section">
+</section>
+    </section>
+
+    <!-- Audio -->
+    <section id="audio" class="container my-5">
+        <h2 class="text-primary mb-4">Audio Saya</h2>
+        <audio controls>
+            <source src="WhatsApp Ptt 2025-05-11 at 22.50.40.ogg" type="audio/mpeg" />
+            Browser Anda tidak mendukung audio.
+        </audio>
+    </section>
+  <!-- Kontak -->
+    <section id="kontak" class="container">
+      <h2 class="text-primary text-center">Kontak Saya</h2>
+      <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Nama Lengkap" required />
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email" required />
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" placeholder="Pesan Anda" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+      </form>
+    </section>
+
+<section id="galeri" class="container mt-5">
+  <h2 class="text-primary text-center mb-4">Galeri</h2>
+  <div class="gallery-slider">
+    <button class="gallery-prev">❮</button>
+    <div class="gallery-track">
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.38.58.jpeg" alt="Gambar 1">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.38.59.jpeg" alt="Gambar 2">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.39.15.jpeg" alt="Gambar 3">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.39.14.jpeg" alt="Gambar 4">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.39.14 (2).jpeg" alt="Gambar 5">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.39.14 (1).jpeg" alt="Gambar 6">
+      </div>
+      <div class="gallery-item">
+        <img src="WhatsApp Image 2025-05-12 at 05.39.13.jpeg" alt="Gambar 7">
+      </div>
+    </div>
+    <button class="gallery-next">❯</button>
+  </div>
+  <div class="gallery-indicators"></div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const galleryTrack = document.querySelector(".gallery-track");
+      const totalItems = document.querySelectorAll(".gallery-item").length;
+      const prevButton = document.querySelector(".gallery-prev");
+      const nextButton = document.querySelector(".gallery-next");
+      const indicatorsContainer = document.querySelector(".gallery-indicators");
+      let currentIndex = 0;
+
+      // Membuat indikator secara otomatis
+      for (let i = 0; i < totalItems; i++) {
+        const button = document.createElement("button");
+        if (i === 0) button.classList.add("active");
+        indicatorsContainer.appendChild(button);
+      }
+      const indicators = document.querySelectorAll(".gallery-indicators button");
+
+      // Fungsi untuk memperbarui posisi slider
+      function updateGallerySlider() {
+        galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        indicators.forEach((btn, index) => {
+          btn.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      // Navigasi Manual
+      prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateGallerySlider();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateGallerySlider();
+      });
+
+      // Navigasi menggunakan indikator
+      indicators.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          currentIndex = index;
+          updateGallerySlider();
+        });
+      });
+
+      // Auto Slide setiap 2 detik
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateGallerySlider();
+      }, 2000);
+    });
+  </script>
+
+  <!-- Buku Tamu -->
+  <section id="bukutamu" class="container my-5">
+    <h2 class="text-primary mb-4">Buku Tamu</h2>
+    <form id="guestbook-form" class="mb-4">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="guestName" placeholder="Nama Lengkap" required />
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="guestEmail" placeholder="Email" required />
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="guestMessage" placeholder="Pesan" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-4">
+    <p>Temui saya di:</p>
+    <a href="#" class="text-white me-3">📸 Instagram</a>
+    <a href="#" class="text-white me-3">📘 Facebook</a>
+    <a href="#" class="text-white me-3">🎞️ Snack Video</a>
+    <a href="#" class="text-white">🐦 Twitter</a>
+    <p class="mt-3">© 2025 Imanuel Fernando. Semua hak dilindungi.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
